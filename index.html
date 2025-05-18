@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Tools Directory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>⚡ AI Tools Directory</h1>
+
+    <!-- Video embed here -->
+    <video width="200" controls autoplay muted loop style="display:block; margin: 20px auto; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.3);">
+      <source src="videos/mp4.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <input type="text" id="search" placeholder="Search AI Tools..." />
+    <div class="filters">
+      <button data-category="All">All</button>
+      <button data-category="Text">Text</button>
+      <button data-category="Image">Image</button>
+      <button data-category="Video">Video</button>
+      <button data-category="Chatbot">Chatbot</button>
+      <button data-category="Productivity">Productivity</button>
+      <button data-category="Marketing">Marketing</button>
+      <button data-category="Design">Design</button>
+    </div>
+  </header>
+  
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main id="tool-list"></main>
+
+  <footer>
+    <p>🚀 Made with ❤️ by Parvinder Panwar</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

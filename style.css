@@ -1,0 +1,178 @@
+/* Base Style */
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background: #222;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+/* Search Bar */
+input#search {
+  padding: 10px;
+  width: 60%;
+  max-width: 400px;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Filters Section */
+.filters {
+  margin-top: 15px;
+}
+
+.filters button {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters button[data-category="All"] {
+  background: #555;
+}
+.filters button[data-category="Text"] {
+  background: #007bff;
+}
+.filters button[data-category="Image"] {
+  background: #e83e8c;
+}
+.filters button[data-category="Video"] {
+  background: #ff5722;
+}
+.filters button[data-category="Chatbot"] {
+  background: #6f42c1;
+}
+.filters button[data-category="Productivity"] {
+  background: #28a745;
+}
+.filters button[data-category="Marketing"] {
+  background: #fd7e14;
+}
+.filters button[data-category="Design"] {
+  background: #17a2b8;
+}
+
+.filters button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.filters button.active {
+  box-shadow: 0 0 0 3px white;
+}
+
+/* Nav Bar */
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+  background: #333;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #f39c12;
+}
+
+/* Tool List */
+#tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Tool Card */
+.tool {
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.tool:hover {
+  transform: scale(1.03);
+}
+
+/* Tool Texts */
+.tool h2 {
+  margin: 0 0 10px;
+}
+
+.tool p {
+  font-size: 14px;
+  color: #333;
+}
+
+.tool a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Tool Category Colors */
+.tool.text {
+  border-left: 6px solid #007bff;
+  background: #e6f0ff;
+}
+
+.tool.image {
+  border-left: 6px solid #e83e8c;
+  background: #ffe6f1;
+}
+
+.tool.video {
+  border-left: 6px solid #ff5722;
+  background: #fff0e6;
+}
+
+.tool.chatbot {
+  border-left: 6px solid #6f42c1;
+  background: #f3e6ff;
+}
+
+.tool.productivity {
+  border-left: 6px solid #28a745;
+  background: #e6f7ec;
+}
+
+.tool.marketing {
+  border-left: 6px solid #fd7e14;
+  background: #fff4e6;
+}
+
+.tool.design {
+  border-left: 6px solid #17a2b8;
+  background: #e6fafd;
+}
+
+/* Footer */
+footer {
+  padding: 15px;
+  background: #eee;
+  margin-top: 20px;
+}
