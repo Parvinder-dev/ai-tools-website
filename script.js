@@ -39,7 +39,6 @@ function showTools(filterCategory = "All", searchText = "") {
   } else {
     filtered.forEach(tool => {
       const toolDiv = document.createElement("div");
-      // ✅ Add category as class name for styling
       toolDiv.className = `tool ${tool.category.toLowerCase().trim()}`;
       toolDiv.innerHTML = `
         <h2>${tool.name}</h2>
@@ -64,6 +63,27 @@ filterButtons.forEach(button => {
     button.classList.add("active");
     showTools(button.dataset.category, searchInput.value);
   });
+});
+
+// Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Load saved theme from localStorage
+if (localStorage.getItem('theme') === 'dark') {
+  body.classList.add('dark-mode');
+  themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  if (body.classList.contains('dark-mode')) {
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    localStorage.setItem('theme', 'light');
+  }
 });
 
 // Show all tools initially
