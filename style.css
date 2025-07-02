@@ -1,7 +1,26 @@
 /* Base Style */
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #333;
+  --header-bg: #222;
+  --nav-bg: #333;
+  --footer-bg: #eee;
+  --tool-bg: #fff;
+}
+
+body.dark-mode {
+  --bg-color: #1e1e2f;
+  --text-color: #f0f0f0;
+  --header-bg: #111;
+  --nav-bg: #222;
+  --footer-bg: #333;
+  --tool-bg: #2a2a3b;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: #f8f9fa;
+  background: var(--bg-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
   text-align: center;
@@ -9,7 +28,7 @@ body {
 
 /* Header */
 header {
-  background: #222;
+  background: var(--header-bg);
   color: white;
   padding: 20px;
 }
@@ -80,7 +99,7 @@ input#search {
 nav {
   text-align: center;
   margin-bottom: 20px;
-  background: #333;
+  background: var(--nav-bg);
   padding: 10px 0;
 }
 
@@ -92,6 +111,19 @@ nav a {
 }
 
 nav a:hover {
+  color: #f39c12;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.theme-toggle:hover {
   color: #f39c12;
 }
 
@@ -111,6 +143,7 @@ nav a:hover {
   width: 280px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
+  background: var(--tool-bg);
 }
 
 .tool:hover {
@@ -124,7 +157,7 @@ nav a:hover {
 
 .tool p {
   font-size: 14px;
-  color: #333;
+  color: var(--text-color);
 }
 
 .tool a {
@@ -173,6 +206,6 @@ nav a:hover {
 /* Footer */
 footer {
   padding: 15px;
-  background: #eee;
+  background: var(--footer-bg);
   margin-top: 20px;
 }
